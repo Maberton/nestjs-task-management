@@ -4,6 +4,8 @@ import { AppModule } from './app.module';
 import { TransformInterceptor } from './transform.interceptor';
 import { Logger } from '@nestjs/common';
 
+console.log(process.env.STAGE);
+
 async function bootstrap() {
   const logger = new Logger();
   const app = await NestFactory.create(AppModule);
